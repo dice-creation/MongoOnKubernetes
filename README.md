@@ -33,3 +33,15 @@ Step 5: Running mongoDB Url
 
 # username: admin
 # password: pass
+
+
+
+To curl request:
+curl -u admin:pass -X GET http://127.0.0.1:51568/db/dog_dump/dog_data > curl.txt
+
+
+curl -u admin:pass -X GET http://127.0.0.1:51568/db/dog_dump/dog_data/65c59cd11f1c012e8e7a8f16
+ -H "Content-Type: application/ejson" -H "Accept: application/json" --data-raw '{
+    "database":"dog_dump",
+    "collection":"dog_data",
+}'
